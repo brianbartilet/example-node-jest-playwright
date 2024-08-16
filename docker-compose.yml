@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3100:3100"
+    networks:
+      - app-network
+
+  frontend-app:
+    restart: always
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    networks:
+      - app-network
+    depends_on:
+      - backend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5173"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 1G
+    environment:
+      - REACT_APP_WEBSOCKET_URL=ws://backend:3100;
+      - REACT_APP_API_URL=http://backend:3100
+  
+  frontend-tests:
+    restart: always
+    build:
+      context: ./frontend/tests
+      dockerfile: Dockerfile
+    depends_on:
+      - frontend-app
+    networks:
+      - app-network 
+    environment:
+      - APP_URL=http://frontend-app:5173
+    entrypoint: ["/wait-for-it.sh", "frontend-app:5173", "--", "npm", "run", "test"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://frontend-app:5173"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 1G
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    
+networks:
+  app-network:
+    driver: bridge

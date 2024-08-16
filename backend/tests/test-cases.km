@@ -1,0 +1,660 @@
+{
+    "root": {
+        "data": {
+            "id": "d3cezhrk65k0",
+            "created": 1723311621705,
+            "text": "test-cases"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d3cezopay6w0",
+                    "created": 1723311636806,
+                    "text": "get-coins",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d3cf0gpqznc0",
+                            "created": 1723311697783,
+                            "text": "FUNCTIONAL"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3cf2jdrhvk0",
+                                    "created": 1723311860317,
+                                    "text": "SCENARIOS"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3cpszbnbyg0",
+                                            "created": 1723342143585,
+                                            "text": "View available coins",
+                                            "layout_right_offset": {
+                                                "x": -2,
+                                                "y": 0
+                                            },
+                                            "background": "#92d050"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d3cf0ha40yg0",
+                            "created": 1723311699015,
+                            "text": "INTEGRATION"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d3cf0hq6leo0",
+                            "created": 1723311699986,
+                            "text": "NEGATIVE"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d3cezprdogw0",
+                    "created": 1723311639109,
+                    "text": "get-inventory",
+                    "layout_mind_offset": {
+                        "x": -120.0000023096801,
+                        "y": 83.49999973922974
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d3cf0gpqznc0",
+                            "created": 1723311697783,
+                            "text": "FUNCTIONAL"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3cf2jdrhvk0",
+                                    "created": 1723311860317,
+                                    "text": "SCENARIOS"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3cpszbnbyg0",
+                                            "created": 1723342143585,
+                                            "text": "View inventory",
+                                            "layout_right_offset": {
+                                                "x": -2,
+                                                "y": 0
+                                            },
+                                            "background": "#92d050"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d3cf0ha40yg0",
+                            "created": 1723311699015,
+                            "text": "INTEGRATION",
+                            "layout_right_offset": {
+                                "x": 115,
+                                "y": 67
+                            }
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d3cpsn71z280",
+                            "created": 1723342117186,
+                            "text": "NEGATIVE",
+                            "layout_right_offset": {
+                                "x": 98.2499930523336,
+                                "y": 80.75000001862645
+                            }
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d3cezqogyqo0",
+                    "created": 1723311641110,
+                    "text": "purchase-coin",
+                    "expandState": "expand",
+                    "layout_mind_offset": {
+                        "x": -213,
+                        "y": -33
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d3cf0gpqznc0",
+                            "created": 1723311697783,
+                            "text": "FUNCTIONAL",
+                            "layout_left_offset": {
+                                "x": -56,
+                                "y": -120
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3cf2jdrhvk0",
+                                    "created": 1723311860317,
+                                    "text": "SCENARIOS"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3cpv4ofe600",
+                                            "created": 1723342311970,
+                                            "text": "User can purchase coin",
+                                            "background": "#92d050"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3cpvbawd740",
+                                                    "created": 1723342326390,
+                                                    "text": "buy",
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cpvdufigg0",
+                                                    "created": 1723342331924,
+                                                    "text": "sell",
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cpvg2iivs0",
+                                                    "created": 1723342336767,
+                                                    "text": "partial sell",
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3cpvy2opls0",
+                                            "created": 1723342375959,
+                                            "text": "User can purchase multiple coins",
+                                            "background": "#92d050"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d3cf0gpqznc0",
+                            "created": 1723311697783,
+                            "text": "INTEGRATION",
+                            "layout_left_offset": {
+                                "x": -296,
+                                "y": -48
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3cf2jdrhvk0",
+                                    "created": 1723311860317,
+                                    "text": "SCENARIOS"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3cptpk9lqw0",
+                                            "created": 1723342200703,
+                                            "text": "Inventory is updated when purchase is completed",
+                                            "background": "#92d050"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3cpu1o3z680",
+                                                    "created": 1723342227056,
+                                                    "text": "buy",
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cpu4k4o080",
+                                                    "created": 1723342233346,
+                                                    "text": "sell",
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cpu7619jk0",
+                                                    "created": 1723342239024,
+                                                    "text": "partial sell",
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d3cf0hq6leo0",
+                            "created": 1723311699986,
+                            "text": "NEGATIVE"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3cf2eas97k0",
+                                    "created": 1723311849253,
+                                    "text": "PARAMETERS",
+                                    "layout_right_offset": {
+                                        "x": -598,
+                                        "y": -43
+                                    },
+                                    "layout_left_offset": {
+                                        "x": -94,
+                                        "y": 63
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3cpqhx9cko0",
+                                            "created": 1723341948982,
+                                            "text": "coinId",
+                                            "layout_right_offset": {
+                                                "x": -344,
+                                                "y": -6
+                                            },
+                                            "layout_left_offset": {
+                                                "x": -423,
+                                                "y": 35
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3cpywlofhc0",
+                                                    "created": 1723342607846,
+                                                    "text": "INVALID TYPE",
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cpzxy3kyo0",
+                                                    "created": 1723342689138,
+                                                    "text": "ZERO VALUE",
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cpz0myu000",
+                                                    "created": 1723342616631,
+                                                    "text": "NON EXISTENT",
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cpz3v9u140",
+                                                    "created": 1723342623664,
+                                                    "text": "NEGATIVE VALUE",
+                                                    "layout_left_offset": {
+                                                        "x": -180,
+                                                        "y": -12
+                                                    },
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cpz8aaa000",
+                                                    "created": 1723342633279,
+                                                    "text": "NULL",
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cq051ws480",
+                                                    "created": 1723342704606,
+                                                    "text": "LARGE NUMBER",
+                                                    "layout_left_offset": {
+                                                        "x": -179.4999998882413,
+                                                        "y": -58.000000521540585
+                                                    },
+                                                    "background": "#92d050"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d3cq0agc9nk0",
+                                                            "created": 1723342716363,
+                                                            "text": "positive",
+                                                            "background": "#92d050"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3cq0e209vk0",
+                                                            "created": 1723342724203,
+                                                            "text": "negative",
+                                                            "background": "#92d050"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3cpqhx9cko0",
+                                            "created": 1723341948982,
+                                            "text": "amount",
+                                            "layout_right_offset": {
+                                                "x": -356,
+                                                "y": -4
+                                            },
+                                            "layout_left_offset": {
+                                                "x": -291.2499956600368,
+                                                "y": 68.74999897554517
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3cpzxy3kyo0",
+                                                    "created": 1723342689138,
+                                                    "text": "ZERO VALUE",
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cq051ws480",
+                                                    "created": 1723342704606,
+                                                    "text": "LARGE NUMBER",
+                                                    "layout_left_offset": {
+                                                        "x": -7.499999888241291,
+                                                        "y": 34.999999478459415
+                                                    },
+                                                    "background": "#92d050"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d3cq0agc9nk0",
+                                                            "created": 1723342716363,
+                                                            "text": "positive",
+                                                            "background": "#92d050"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3cq0e209vk0",
+                                                            "created": 1723342724203,
+                                                            "text": "negative",
+                                                            "background": "#92d050"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d3cf2jdrhvk0",
+                                    "created": 1723311860317,
+                                    "text": "SCENARIOS",
+                                    "layout_right_offset": {
+                                        "x": -614,
+                                        "y": 43
+                                    },
+                                    "layout_left_offset": {
+                                        "x": -24,
+                                        "y": 144
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3cpqu5g00w0",
+                                            "created": 1723341975598,
+                                            "text": "User cannot have negative balance",
+                                            "layout_right_offset": {
+                                                "x": -478,
+                                                "y": -22
+                                            },
+                                            "layout_left_offset": {
+                                                "x": -2.499999962747097,
+                                                "y": 371.74999741092313
+                                            },
+                                            "background": "#ffff00"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3cpr3h638o0",
+                                            "created": 1723341995898,
+                                            "text": "User cannot buy a coin with insufficient balance",
+                                            "layout_right_offset": {
+                                                "x": -610,
+                                                "y": -14
+                                            },
+                                            "background": "#92d050"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3cpr3h638o0",
+                                            "created": 1723341995898,
+                                            "text": "User cannot sell a coin not in his portfolio",
+                                            "layout_right_offset": {
+                                                "x": -610,
+                                                "y": -14
+                                            },
+                                            "background": "#92d050"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3cq0thn0ow0",
+                                            "created": 1723342757800,
+                                            "text": "User cannot sell a coin amount more than available",
+                                            "background": "#92d050"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d3cpwok30gw0",
+                            "created": 1723342433607,
+                            "text": "coins-ws",
+                            "layout_left_offset": {
+                                "x": 454.99999321997166,
+                                "y": 203.7499969638883
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3cpy3bspw80",
+                                    "created": 1723342544122,
+                                    "text": "FUNCTIONAL",
+                                    "expandState": "expand",
+                                    "layout_left_offset": {
+                                        "x": 414.99999381601805,
+                                        "y": -12.499999813735485
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3cpwwsfk200",
+                                            "created": 1723342451527,
+                                            "text": "SCENARIOS",
+                                            "layout_left_offset": {
+                                                "x": 271.2499957345425,
+                                                "y": -122.00000067055214
+                                            },
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3ctiwx13tk0",
+                                                    "created": 1723352639146,
+                                                    "text": "Check connection",
+                                                    "layout_left_offset": {
+                                                        "x": 482,
+                                                        "y": -34
+                                                    },
+                                                    "background": "#92d050"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d3ctjbb3jfk0",
+                                    "created": 1723352670471,
+                                    "text": "INTEGRATION",
+                                    "layout_left_offset": {
+                                        "x": 425,
+                                        "y": 72
+                                    },
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3cpx51p6gg0",
+                                            "created": 1723342469501,
+                                            "text": "Coin prices are updated",
+                                            "layout_left_offset": {
+                                                "x": 393,
+                                                "y": -10
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3cpxdqslsg0",
+                                                    "created": 1723342488433,
+                                                    "text": "coinA",
+                                                    "layout_left_offset": {
+                                                        "x": 349.9999947845937,
+                                                        "y": -14.999999776482582
+                                                    }
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cpxdqslsg0",
+                                                    "created": 1723342488433,
+                                                    "text": "coinB",
+                                                    "layout_left_offset": {
+                                                        "x": 349.9999947845937,
+                                                        "y": -14.999999776482582
+                                                    }
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cpxdqslsg0",
+                                                    "created": 1723342488433,
+                                                    "text": "coinC",
+                                                    "layout_left_offset": {
+                                                        "x": 349.9999947845937,
+                                                        "y": -14.999999776482582
+                                                    }
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3cpxdqslsg0",
+                                                    "created": 1723342488433,
+                                                    "text": "coinD",
+                                                    "layout_left_offset": {
+                                                        "x": 349.9999947845937,
+                                                        "y": -14.999999776482582
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

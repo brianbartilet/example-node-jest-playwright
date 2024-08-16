@@ -1,0 +1,19 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --config=config/cucumber.js",
+    "test:ci": "node --max-old-space-size=4096 node_modules/.bin/cucumber-js --config=config/cucumber.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^22.2.0",
+    "ts-node": "^10.9.2"
+  }
+}

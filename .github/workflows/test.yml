@@ -1,0 +1,88 @@
+name: Run Backend and Frontend Tests
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Docker Build
+      uses: docker/setup-buildx-action@v1
+
+    - name: Cache Docker layers
+      uses: actions/cache@v2
+      with:
+        path: /tmp/.buildx-cache
+        key: ${{ runner.os }}-buildx-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-buildx-
+    
+    - name: Install Docker Compose
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y docker-compose
+
+    - name: Build containers
+      run: docker-compose build
+    
+    - name: Start services
+      run: docker-compose up -d
+    
+    - name: Wait for frontend service to connect to backend
+      run: |
+        while ! docker-compose exec -T frontend-app curl -f http://backend:3100; do
+        echo "Waiting for backend service..."
+        sleep 10
+        done
+
+    - name: Wait for frontend service to be healthy
+      run: |
+        while ! docker-compose exec -T frontend-app curl -f http://localhost:5173; do
+        echo "Waiting for frontend service..."
+        sleep 10
+        done
+
+    - name: List running containers
+      run: docker ps
+      continue-on-error: true
+
+    - name: Run Backend Tests
+      run: docker-compose exec -T backend npm run test
+    
+    - name: Wait for frontend application to be healthy
+      run: |
+        while ! docker-compose exec -T frontend-tests curl -f http://frontend-app:5173; do
+        echo "Waiting for frontend app..."
+        sleep 10
+        done
+
+    - name: Run Frontend Tests
+      continue-on-error: true
+      run: docker-compose exec -T frontend-tests npm run test:ci
+
+    - name: List directories in frontend-tests container
+      if: always()
+      run: docker-compose exec -T frontend-tests sh -c 'ls -d */ || echo "No directories found"'
+
+    - name: Copy artifacts from frontend-tests container
+      if: always()
+      run: docker-compose exec -T frontend-tests sh -c 'tar -czf - /test-results' | tar -xzf - -C ./artifacts
+    
+    - name: Upload artifacts
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: frontend-tests-artifacts
+        path: ./artifacts
+
+    - name: Shut down services
+      if: always()
+      run: docker-compose down
+
