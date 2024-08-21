@@ -73,8 +73,12 @@ jobs:
 
     - name: Copy artifacts from frontend-tests container
       if: always()
-      run: docker-compose exec -T frontend-tests sh -c 'tar -czf - /test-results' | tar -xzf - -C ./artifacts
-    
+      #run: docker-compose exec -T frontend-tests sh -c 'tar -czf - /test-results' | tar -xzf - -C ./artifacts
+      run: |
+        docker-compose exec -T frontend-tests sh -c 'mkdir -p /tmp/test-results && cp -r /test-results/* /tmp/test-results && tar -czf /tmp/test-results.tar.gz -C /tmp test-results'
+        docker cp frontend-tests:/tmp/test-results.tar.gz ./artifacts/test-results.tar.gz
+        tar -xzf ./artifacts/test-results.tar.gz -C ./artifacts
+
     - name: Upload artifacts
       if: always()
       uses: actions/upload-artifact@v3
