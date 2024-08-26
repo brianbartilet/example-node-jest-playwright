@@ -21,4 +21,4 @@ ADD https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.s
 RUN chmod +x /wait-for-it.sh
 
 # Start the server and wait for it to be ready before running tests
-CMD ["npm", "run", "test:ci"]
+CMD ["npm", "run", "test"]
