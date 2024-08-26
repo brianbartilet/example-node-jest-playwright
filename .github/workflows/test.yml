@@ -64,7 +64,7 @@ jobs:
         done
 
     - name: Run Frontend Tests
-      continue-on-error: true
+      # continue-on-error: true
       run: docker-compose exec -T frontend-tests npm run test:ci
 
     - name: List directories in frontend-tests container

@@ -29,16 +29,16 @@ function App() {
   const [purchase, setPurchase] = useState<Purchase[]>([]);
   const [time, setTime] = useState<number>(0);
 
-  const websocketUrl = process.env.REACT_APP_WEBSOCKET_URL || "ws://localhost:3100";
-  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3100";
-
+  const websocketUrl = import.meta.env.VITE_WEBSOCKET_URL || "ws://localhost:3100";
+  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3100";
 
   useEffect(() => {
     // WebSocket connection
     const socket = new WebSocket(websocketUrl);
 
     socket.addEventListener("open", () => {
-      console.log("WebSocket connection established");
+      console.log(`WebSocket connection established ${websocketUrl}`);
+      console.log(`API url ${apiUrl}`);
     });
 
     socket.addEventListener("message", (event) => {

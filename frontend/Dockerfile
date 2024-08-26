@@ -11,7 +11,7 @@ RUN apk update && apk add curl
 RUN if ! command -v yarn &> /dev/null; then npm install -g yarn; fi
 
 # Copy the package.json and yarn.lock files
-COPY package.json ./
+COPY package.json yarn.lock ./
 
 # Install the dependencies using Yarn
 RUN yarn install

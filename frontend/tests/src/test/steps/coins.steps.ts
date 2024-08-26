@@ -47,7 +47,7 @@ Then('my portfolio is updated', async function (this: Fixture) {
   if (this.contextData.action === 'buy') {
     expect(portfolioItem).toContain('1');
   }
-  if (this.contextData.action === 'buy') {
+  if (this.contextData.action === 'sell') {
     expect(portfolioItem).toContain('0');
   }
   

@@ -32,9 +32,6 @@ services:
           memory: 4G
         reservations:
           memory: 1G
-    environment:
-      - REACT_APP_WEBSOCKET_URL=ws://backend:3100;
-      - REACT_APP_API_URL=http://backend:3100
   
   frontend-tests:
     restart: always
