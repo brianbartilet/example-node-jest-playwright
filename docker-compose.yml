@@ -22,7 +22,7 @@ services:
     depends_on:
       - backend
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5173"]
+      test: ["CMD", "curl", "-f", "http://backend:3100"]
       interval: 30s
       timeout: 10s
       retries: 5
@@ -32,9 +32,6 @@ services:
           memory: 4G
         reservations:
           memory: 1G
-    environment:
-      - VITE_WEBSOCKET_URL=ws://backend:3100
-      - VITE_API_URL=http://backend:3100
   
   frontend-tests:
     restart: always
@@ -45,9 +42,6 @@ services:
       - frontend-app
     networks:
       - app-network 
-    environment:
-      - APP_URL=http://frontend-app:5173
-    entrypoint: ["/wait-for-it.sh", "frontend-app:5173", "--", "npm", "run", "test"]
     healthcheck:
       test: ["CMD", "curl", "-f", "http://frontend-app:5173"]
       interval: 30s

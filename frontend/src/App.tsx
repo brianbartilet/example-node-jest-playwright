@@ -29,11 +29,8 @@ function App() {
   const [purchase, setPurchase] = useState<Purchase[]>([]);
   const [time, setTime] = useState<number>(0);
 
-  const websocketUrl = "ws://backend:3100";
-  const apiUrl = "http://backend:3100";
-
-  //const websocketUrl = import.meta.env.VITE_WEBSOCKET_URL || "ws://localhost:3100";
-  //const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3100";
+  const websocketUrl = import.meta.env.REACT_APP_WEBSOCKET_URL || "ws://localhost:3100";
+  const apiUrl = import.meta.env.REACT_APP_API_URL || "http://localhost:3100";
 
   useEffect(() => {
     // WebSocket connection

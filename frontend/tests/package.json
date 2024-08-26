@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js --config=config/cucumber.js",
-    "test:ci": "node --max-old-space-size=4096 node_modules/.bin/cucumber-js --config=config/cucumber.js"
+    "test:ci": "dotenv -e .env.ci -- cucumber-js --config=config/cucumber.js"
   },
   "keywords": [],
   "author": "",
