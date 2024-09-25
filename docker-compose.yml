@@ -44,7 +44,7 @@ services:
       - app-network 
     environment:
       - APP_URL=http://frontend-app:5173
-    entrypoint: ["/wait-for-it.sh", "frontend-app:5173", "--", "npm", "run", "test"]
+    entrypoint: ["/wait-for-it.sh", "frontend-app:5173", "--", "npm", "run", "test:ci"]
     healthcheck:
       test: ["CMD", "curl", "-f", "http://frontend-app:5173"]
       interval: 30s
