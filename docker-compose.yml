@@ -32,9 +32,6 @@ services:
           memory: 4G
         reservations:
           memory: 1G
-    environment:
-      - VITE_WEBSOCKET_URL=ws://backend:3100
-      - VITE_API_URL=http://backend:3100
   
   frontend-tests:
     restart: always
