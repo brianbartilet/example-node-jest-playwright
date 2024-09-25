@@ -58,7 +58,7 @@ Before({ timeout: 20000 }, async function (this: Fixture) {
   console.log('Before hook: initializing browser and page');
   
   try {
-    this.browser = await chromium.launch({ headless: false });
+    this.browser = await chromium.launch({ headless: true });
     this.page = await this.browser.newPage();
     // Use environment variable for URL, default to 'http://localhost:5173' if not set
     const appUrl = process.env.APP_URL || 'http://localhost:5173';
