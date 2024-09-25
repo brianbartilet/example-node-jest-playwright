@@ -23,4 +23,4 @@ COPY . .
 EXPOSE 5173
 
 # Start the frontend server
-CMD ["yarn", "dev"]
+CMD ["yarn", "ci"]

@@ -1,7 +1,9 @@
 # Playwright Test Project
 
 This project is designed to perform end-to-end testing on a web application using Playwright with Cucumber for BDD-style test scenarios.
-
+## Installation
+- `npm install`
+- `npx playwright install`
 ## Table of Contents
 
 - [Project Structure](#project-structure)
