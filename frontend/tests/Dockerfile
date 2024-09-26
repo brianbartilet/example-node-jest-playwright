@@ -17,8 +17,8 @@ RUN npm install
 COPY . .
 
 # Add wait-for-it.sh script
-ADD https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh /wait-for-it.sh
-RUN chmod +x /wait-for-it.sh
+#ADD https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh /wait-for-it.sh
+#RUN chmod +x /wait-for-it.sh
 
 # Start the server and wait for it to be ready before running tests
 CMD ["npm", "run", "test:ci"]

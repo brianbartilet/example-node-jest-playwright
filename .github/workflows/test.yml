@@ -51,7 +51,6 @@ jobs:
 
     - name: List running containers
       run: docker ps
-      continue-on-error: true
 
     - name: Run Backend Tests
       run: docker-compose exec -T backend npm run test
